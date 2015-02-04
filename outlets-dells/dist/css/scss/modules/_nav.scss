@@ -31,16 +31,21 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  min-height: 100%;
   background-color: $site-bg;
 }
 
 .inner-wrapper {
   position: relative;
   width: $max-width;
+  @include padding(0 0 $base-spacing * 4 0);
   @include margin(0 auto);
   background-color: $color-white;
   @include media($tablet) {
     width: 100%;
+  }
+  @include media($mobile) {
+    @include padding(0);
   }
 }
 

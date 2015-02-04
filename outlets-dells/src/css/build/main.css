@@ -2623,16 +2623,21 @@ header {
   position: relative;
   overflow: hidden;
   width: 100%;
+  min-height: 100%;
   background-color: #eeede8; }
 
 .inner-wrapper {
   position: relative;
   width: 1000px;
+  padding: 0 0 4em;
   margin: 0 auto;
   background-color: #fff; }
   @media screen and (max-width: 1000px) {
     .inner-wrapper {
       width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .inner-wrapper {
+      padding: 0; } }
 
 nav {
   position: relative;
@@ -2935,6 +2940,18 @@ footer {
     .sticky-footer {
       text-align: center;
       position: relative; } }
+  .sticky-footer p {
+    font-family: "swissboldcond", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    float: left;
+    padding: 1em; }
+  .sticky-footer a {
+    color: #fff; }
+    .sticky-footer a:hover {
+      color: #9998c8; }
+  .sticky-footer .hours {
+    float: right;
+    text-transform: uppercase; }
 
 .banner {
   height: auto;
