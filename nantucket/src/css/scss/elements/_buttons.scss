@@ -1,0 +1,45 @@
+button,
+.button, .genericButton, #dirmapbutton {
+  -webkit-font-smoothing: antialiased;
+  @include margin($base-spacing 0);
+  @include appearance(none);
+  background-color: $base-button-color;
+  border-radius: $base-border-radius;
+  border: none;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  a, a[href^="http://"], a[href^="https://"] {
+    color: $color-white;
+    &:hover, &:focus {
+      color: $color-white;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $base-button-color-hover;
+    color: white;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &:after {
+    margin-left: ($base-spacing / 2);
+    font-family: $fontawesome;
+    content: '\f105';
+  }
+}

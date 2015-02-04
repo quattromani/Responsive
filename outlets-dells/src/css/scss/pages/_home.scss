@@ -1,0 +1,59 @@
+.home {
+	.inner-wrapper {
+		background-image: url(/mimages/ssmgse15/bg-home-vero-beach.jpg);
+		background-position: center;
+		background-size: cover;
+	}
+	section {
+		@include outer-container;
+		article {
+			@include span-columns(4);
+			@include media($tablet) {
+				@include span-columns(8);
+			}
+		}
+		aside {
+			@include span-columns(8);
+			@include omega();
+			float: right; 
+			@include media($tablet) {
+				@include span-columns(8);
+			}
+			.sales-teaser {
+				text-align: center;
+				#scroller_container {
+					text-align: left;
+				}
+				h3, h4, h5 {
+					text-transform: uppercase;
+				}
+				h3 {
+					@include font-size(40.5);
+				}
+				h4 {
+					@include font-size(27);
+				}
+				h5 {
+					@include font-size(24);
+				}
+				@include media($mobile) {
+					h3 {
+						@include font-size(27);
+					}
+					h4 {
+						@include font-size(18);
+					}
+					h5 {
+						@include font-size(17.25);
+					}
+				}
+			}
+		}
+	}
+}
+#scroller_container {
+	max-height: 400px;
+	overflow: hidden;
+	background-color: rgba($color-white,0.5);
+	padding-left: 15%;
+}

@@ -1,0 +1,70 @@
+.home {
+	.inner-wrapper {
+		background-image: url(/mimages/ssmgse15/bg-contentHome.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	section {
+		@include margin(1em 0 0);
+		aside {
+			@include margin(3em 0 0);
+		}
+		@include media($mobile) {
+			aside {
+				@include margin(1em 0 0);
+			}
+		}
+	}
+}
+#scroller_container {
+	max-height: 400px;
+	overflow: hidden;
+	background-color: rgba($color-white,0.5);
+	padding-left: 15%;
+}
+section {
+	@include outer-container;
+	article {
+		@include span-columns(6);
+		@include media($tablet) {
+			@include span-columns(8);
+		}
+	}
+	aside {
+		@include span-columns(6);
+		@include omega();
+		float: right; 
+		@include media($tablet) {
+			@include span-columns(8);
+		}
+		.sales-teaser {
+			text-align: center;
+			#scroller_container {
+				text-align: left;
+			}
+			h3, h4, h5 {
+				text-transform: uppercase;
+			}
+			h3 {
+				@include font-size(32.4);
+			}
+			h4 {
+				@include font-size(27);
+			}
+			h5 {
+				@include font-size(25.5);
+			}
+			@include media($mobile) {
+				h3 {
+					@include font-size(27);
+				}
+				h4 {
+					@include font-size(18);
+				}
+				h5 {
+					@include font-size(17.25);
+			}
+			}
+		}
+	}
+}

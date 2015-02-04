@@ -1,0 +1,22 @@
+# Site settings
+title: Outlets of Mississippi
+version: 0.0.1
+author: Noel Killebrew
+email: noel@placewise.com
+description: "Outlets of Mississippi"
+baseurl: ""
+url: ""
+author: "Noel Kilebrew"
+
+google_analytics: false
+google_analytics_id: UA-XXXXXXXX-X
+jquery_version: 1.11.2
+
+name: mall
+streetaddress: 1234 Address Drive
+city: Mississippi
+state: MS
+zip: 00000
+phone: (111) 222-3333
+
+footer: ""

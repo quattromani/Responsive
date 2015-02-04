@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+.container {
+  @include outer-container;
+  position: relative;
+}
+
+.content {
+  overflow: hidden; //keeps box shadow from covering header
+
+  @include media($tablet) {
+    @include padding(0 $base-spacing);
+  }
+  .container {
+    background-color: $color-white;
+  }
+}
+
+section {
+  @include padding($base-spacing);
+  overflow: auto;
+  background-color: $color-white;
+  box-shadow: $base-box-shadow;
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
+article {
+  @include outer-container;
+  @include span-columns(8);
+  @include margin(0 null);
+  @include padding($second-spacing);
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include padding(0);
+    border: none;
+  }
+}
+
+aside {
+  @include span-columns(4);
+  @include padding($second-spacing);
+  border-left: $base-border;
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include padding(0);
+    border: none;
+  }
+
+  img, .adBlock-300-250 {
+    @include image-bordered;
+    @include image-shadowed;
+    overflow: hidden; //added this so the img won't stick out...
+  }
+}
+
+.mobile-show { display: none; }
+
+@include media($mobile) {
+  .mobile-hide { display: none; }
+  .mobile-show { display: block; }
+}

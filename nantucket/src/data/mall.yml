@@ -1,0 +1,21 @@
+# Site settings
+title: Nantucket
+version: 0.0.1
+author: Noel Killebrew
+email: noel@placewise.com
+description: "Nantucket, Shopping Center in Nantucket MA, Shopping, Retail Leasing, Retail"
+baseurl: ""
+url: ""
+
+google_analytics: false
+google_analytics_id: UA-XXXXXXXX-X
+jquery_version: 1.11.2
+
+name: mall
+streetaddress: 44 Main St
+city: Nantucket
+state: MA
+zip: 02554
+phone: '508.288.7501'
+
+footer: ""

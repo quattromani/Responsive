@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+footer {
+  background-size: 12px 12px;
+  bottom: 0;
+  border-bottom: 2px solid #bcbcbc;
+  color: $footer-text;
+  overflow: hidden; //keeps box shadow from covering section
+
+  .container {
+    @include padding($base-spacing);
+    border-top: 2px solid $color-dark-grey;
+    background-color: $color-white;
+    box-shadow: $base-box-shadow;
+  }
+
+  span {
+    @include font-size($footer-font-size);
+  }
+
+  ul {
+    @include font-size($footer-font-size);
+  }
+
+  a {
+    color: $footer-link-color;
+    font-weight: $footer-link-font-weight;
+  }
+
+  .mall-details {
+    float:left;
+
+    @include media($mobile) {
+      float: none;
+      text-align: center;
+    }
+  }
+
+  .legal {
+    @include horizontal-list(piped);
+    float:left;
+
+    @include media($mobile) {
+      float: none;
+      text-align: center;
+    }
+  }
+
+  .social {
+    @include horizontal-list;
+    float: right;
+    text-align: right;
+
+    .fa {
+      @include font-size(40);
+      color: $color-black;
+    }
+
+    @include media($mobile) {
+      float: none;
+      text-align: center;
+    }
+  }
+
+  .footer-disclaimer {
+    display: inline-block;
+    @include font-size($disclaimer-text);
+    margin-bottom: $base-spacing/2;
+  }
+
+  .pw-logo {
+    clear: both;
+    float: right;
+    @include margin(0 auto);
+
+    @include media($mobile) {
+      float: none;
+      text-align: center;
+    }
+  }
+}

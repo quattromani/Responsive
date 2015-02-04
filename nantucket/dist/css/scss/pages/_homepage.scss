@@ -1,0 +1,26 @@
+.carouselOverlay-wrap {
+		width: $carousel-width;
+	  margin: 0 auto;
+	.carouselOverlay {
+		box-sizing: border-box;
+		@include padding($base-spacing 3em);
+		background: rgba(255,255,255,0.62);
+		float: right;
+		margin-top: 18em;
+		color: #2a2a2a;
+		position: relative;
+		z-index: 99;
+	}
+}
+@include media($tablet) {
+	.carouselOverlay-wrap {
+		width: 100%;
+		.carouselOverlay {
+			margin-top: 30%;
+		}
+	}
+}
+@include media($mobile) {
+	.carouselOverlay-wrap, .carouselOverlay { display: none; }
+}
+#homeContent { display: none; }//barf

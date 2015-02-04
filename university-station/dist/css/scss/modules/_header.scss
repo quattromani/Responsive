@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+header {
+  position: relative;
+  @include padding($base-spacing);
+  @include outer-container;
+  background-color: $header-bg;
+  box-shadow: $base-box-shadow;
+  border-bottom: 2px solid $color-dark-grey;
+
+  a {
+    &.login {
+      @include font-size(12);
+      position: absolute;
+      top:0;
+      right:0;
+      font-weight:300;
+    }
+
+    &.hours {
+      @include font-size(12);
+      position: absolute;
+      top:30%;
+      right: 0;
+      font-weight:700;
+
+      @include media($mobile) {
+        position: relative;
+      }
+
+    span {
+      text-transform: uppercase;
+    }
+
+    }
+  }
+
+  .social {
+    float: right;
+    text-align: right;
+    li {
+      display: table-cell;
+      vertical-align: middle;
+      @include padding(3px);
+      @include font-size($small-body-text);
+      font-weight: $nav-font-weight;
+      font-family: $nav-font-family;
+    }
+
+    .fa {
+      @include font-size(30);
+      color: $color-black;
+    }
+  }
+}
+

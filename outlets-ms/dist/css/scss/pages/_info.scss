@@ -1,0 +1,24 @@
+.info {
+	.left {
+		@include span-columns(7);
+	}
+	.hours {
+		&.right {
+			@include span-columns(5);
+			@include omega();
+		}
+	}
+}
+
+//styleguide
+.styleguide {
+	section {
+		min-height: 0;
+	}
+	article {
+		@include span-columns(8);
+	}
+	aside {
+		@include span-columns(4);
+	}
+}

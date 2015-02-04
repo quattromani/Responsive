@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+header {
+  position: relative;
+  @include padding($base-spacing);
+  background-color: $header-bg;
+
+  .hours { float: right; }
+
+  a {
+    &.login {
+      @include font-size(12);
+      position: absolute;
+      top:0;
+      right:0;
+      font-weight:300;
+    }
+    @include media($mobile) {
+      position: relative;
+    }
+    span {
+      text-transform: uppercase;
+    }
+  }
+}
+.mall-logo img {
+  max-width: 200px;
+}

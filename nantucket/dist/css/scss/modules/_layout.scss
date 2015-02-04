@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+.container {
+  @include outer-container;
+  position: relative;
+}
+
+.content {
+  background-color: $color-brand-quaternary;
+  background-image: linear-gradient(transparent 50%, rgba($color-white,1) 50%);
+  background-size: 120px 120px;
+  overflow: hidden; //keeps box shadow from covering header
+  border-top: 2px solid $header-border-color;
+
+  @include media($tablet) {
+    @include padding(0 $base-spacing);
+  }
+  .container {
+    background-color: $color-white;
+  }
+}
+
+section {
+  @include padding($base-spacing);
+  overflow: auto;
+  background-color: $color-white;
+  box-shadow: $base-box-shadow;
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
+article {
+  @include outer-container;
+  @include span-columns(8);
+  @include margin(0 null);
+  @include padding($second-spacing);
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include padding(0);
+    border: none;
+  }
+}
+
+aside {
+  @include span-columns(4);
+  @include padding($second-spacing);
+  border-left: $base-border;
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include padding(0);
+    border: none;
+  }
+
+  img, .adBlock-300-250 {
+    @include image-bordered;
+    @include image-shadowed;
+    overflow: hidden; //added this so the img won't stick out...
+  }
+}
+// .sy-box {
+//   background-color: $color-brand-quaternary;
+//   background-image: linear-gradient(transparent 50%, rgba($color-white,1) 50%);
+//   background-size: 120px 120px;
+// }

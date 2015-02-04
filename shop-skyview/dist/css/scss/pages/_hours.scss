@@ -1,0 +1,15 @@
+.hours {
+	.left {
+		@include span-columns(7);
+	}
+	.right {
+		@include span-columns(5);
+	}
+  @include media($mobile) {
+    display: block;
+    position: relative;
+    top: null;
+    left: null;
+    text-align: center;
+  }
+}

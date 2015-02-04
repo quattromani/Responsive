@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+footer {
+  .container {
+    @include outer-container;
+    @include media($tablet) {
+      padding: 0 1em;
+    }
+    .leaderboard {
+      background-image: url(/mimages/ssmgse15/foot-ad.jpg);
+      background-position: center;
+      height: 115px;
+      @include span-columns(9);
+      @include media($mobile) {
+        @include span-columns(4);
+        float: none;
+        height: auto;
+      }
+    }
+  }
+  @include padding($base-spacing 0);
+  background-color: $footer-bg;
+  color: $footer-text;
+
+  span {
+    @include font-size($footer-font-size);
+  }
+
+  ul {
+    @include font-size($footer-font-size);
+  }
+
+  li {
+    color: $color-brand-quaternary;
+  }
+
+  a {
+    color: $color-brand-quaternary;
+    font-weight: $footer-link-font-weight;
+  }
+
+  p {
+    color: $color-brand-quaternary;
+  }
+  
+  h4 {
+    color: $color-brand-quaternary;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-white;
+  }
+
+  .mall-details {
+    text-align: right;
+    float: right;
+    ul {
+      @include horizontal-list(piped);
+    }
+    @include media($mobile) {
+      float: none;
+      text-align: center;
+    }
+  }
+
+  .legal {
+    @include horizontal-list(piped);
+    float: left;
+
+    @include media($mobile) {
+      float: none;
+      text-align: center;
+    }
+  }
+
+  .social {
+    @include horizontal-list;
+    text-align: left;
+    float: left;
+
+    .fa {
+      @include font-size(30);
+      color: $color-brand-quaternary;
+    }
+
+    @include media($mobile) {
+      float: none;
+      text-align: center;
+    }
+  }
+
+  .footer-disclaimer {
+    display: inline-block;
+    @include font-size($disclaimer-text);
+    margin-bottom: $base-spacing/2;
+  }
+
+  .pw-logo {
+    clear: left;
+    float: left;
+
+    @include media($mobile) {
+      float: none;
+      text-align: center;
+      @include margin(0 auto);
+      clear: both;
+    }
+  }
+}
+.sticky-footer {
+  background-color: $color-brand-primary;
+  color: white;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  width: $max-width;
+  @include media($tablet) {
+    width: 100%;
+  }
+  @include media($mobile) {
+    text-align: center;
+    position: relative;
+  }
+}

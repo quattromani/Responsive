@@ -1,0 +1,21 @@
+.directory {
+	a {
+		color: $color-black;
+		&:hover {
+			color: $color-brand-primary;
+		}
+	}
+	button {
+		@include margin(1em 0 2em);
+		a {
+			color: $color-white;
+		}
+	}
+	@include media($mobile) {
+		aside { display: none; }
+	}
+}
+
+#dirmapbutton {
+	margin-top: $base-spacing;
+}

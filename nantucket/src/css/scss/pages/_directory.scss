@@ -1,0 +1,22 @@
+.directory {
+	ul.directory-form li {
+		display: inline-block;
+		margin-right: $second-spacing;
+	}
+	ul.left, ul.right, ul.dine {
+		@include span-columns(6);
+		li {
+			border-bottom: 1px dotted $color-grey;
+			@include padding($base-spacing 0);
+			&:last-child {
+				border: none;
+			}
+			img { display: none; } //dine dir has blank img slots that take up space
+		}
+	}
+	@include media($mobile) {
+		ul.left, ul.right, ul.dine {
+			@include span-columns(4);
+		}
+	}
+}

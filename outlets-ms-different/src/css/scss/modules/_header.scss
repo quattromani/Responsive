@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+header {
+  position: relative;
+  @include padding($base-spacing);
+  background-color: rgba($color-brand-primary, 0.8);
+
+  a {
+    &.login {
+      @include font-size(12);
+      position: absolute;
+      top: .75em;
+      right: 0;
+      font-weight: 300;
+      color: $color-white;
+    }
+
+    &.hours {
+      @include font-size(12);
+      position: absolute;
+      top:30%;
+      right: 0;
+      font-weight:700;
+
+      @include media($mobile) {
+        position: relative;
+      }
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+  .social {
+    float: right;
+    text-align: right;
+    @include margin (0 3em 0 1em);
+    li {
+      display: table-cell;
+      vertical-align: middle;
+      @include padding(3px);
+      @include font-size($small-body-text);
+      font-weight: $nav-font-weight;
+      font-family: $nav-font-family;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .fa {
+      @include font-size(30);
+    }
+  }
+}
+.mall-logo img {
+  max-width: 260px;
+}
+#socialSearch {
+  float: right;
+}

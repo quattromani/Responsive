@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+@mixin image-rounded {
+  @include border-radius;
+}
+
+@mixin image-circular {
+  @include border-radius(50%);
+}
+
+@mixin image-bordered {
+  border: ($base-spacing / 2) solid $color-white;
+}
+
+@mixin image-shadowed {
+  box-shadow: 0 0 5px -2px rgba($color-black, .6);
+}
+
+img {
+  display: inherit;
+  height: auto;
+  border: 0;
+  // style the alt text
+  font-style: italics;
+  color: $color-brand-primary;
+
+  &:after {
+    content: " (image)";
+  }
+}
+
+figure {
+  position: relative;
+  width: 100%;
+}
+
+figcaption {
+  margin-bottom: ($base-spacing / 2);
+  @include font-size(14);
+  font-weight: bold;
+}
+
+// ie9 (.ie9)
+// Fix IE9 overflow bug
+.ie9 svg:not(:root) {
+  overflow: hidden;
+}
