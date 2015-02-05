@@ -1,6 +1,6 @@
 .directory {
 	ul.directory-form li {
-		display: inline-block;
+		float: left;
 		margin-right: $second-spacing;
 	}
 	ul.left, ul.right, ul.dine {
@@ -11,7 +11,11 @@
 			&:last-child {
 				border: none;
 			}
-			img { display: none; } //dine dir has blank img slots that take up space
+		}
+	}
+	@include media($tablet) {
+		ul.left, ul.right, ul.dine {
+			@include span-columns(8);
 		}
 	}
 	@include media($mobile) {

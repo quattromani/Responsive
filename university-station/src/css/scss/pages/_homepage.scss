@@ -1,13 +1,20 @@
+.home {
+	h2 {
+		font-size: 4.5rem;
+		font-weight: 400;
+		color: $color-black;
+	}
+}
 .carouselOverlay-wrap {
 		width: $carousel-width;
 	  margin: 0 auto;
 	  position: absolute;
+	  bottom: $base-spacing * 3;
 	.carouselOverlay {
 		box-sizing: border-box;
-		@include padding($base-spacing 3em);
+		@include padding($base-spacing 2em);
 		background: rgba(255,255,255,0.8);
 		float: right;
-		margin-top: 18em;
 		color: #2a2a2a;
 		position: relative;
 		z-index: 99;

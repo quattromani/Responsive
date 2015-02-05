@@ -10,4 +10,10 @@
   p {
     @include font-size($disclaimer-text);
   }
+
+  @include media($tablet) {
+	  img {
+	    float: none;
+	  }
+	}
 }

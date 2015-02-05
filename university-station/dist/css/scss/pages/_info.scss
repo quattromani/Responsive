@@ -1,0 +1,10 @@
+//Directions Page
+#map-canvas, input#starting {
+	@include margin($base-spacing * 1.5 0);
+}
+input[type="button"] {
+	margin-top: 0;
+}
+#map-canvas {
+	max-width: 100%;
+}

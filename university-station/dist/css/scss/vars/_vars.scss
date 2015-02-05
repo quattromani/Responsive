@@ -9,7 +9,7 @@
 
   // =Breakpoints
   $tablet: new-breakpoint(max-width 1020px 8);
-  $mobile: new-breakpoint(max-width 480px 4);
+  $mobile: new-breakpoint(max-width 600px 4);
 
   $base-spacing: 1em !default;
     $pad: $base-spacing;
@@ -23,7 +23,7 @@
   $color-black: #000;
   $color-grey: #ccc;
   $color-light-grey: #e1e1e1;
-  $color-dark-grey: #333;
+  $color-dark-grey: #4e4e56;
 
   // =Brand Palette
   $color-brand-primary: #149165; // Headings
@@ -164,7 +164,7 @@
 
   // =Nav
   $nav-alignment: right;
-  $nav-positioning: -52px; // null
+  $nav-positioning: -48px; // null
   $nav-bg: transparent;
   $nav-bg-hover: null;
   $nav-font-family: $heading-font-family;
@@ -182,7 +182,7 @@
   $nav-dropdown-border-color-hover: null;
   $nav-hamburger-bg: null;
   $nav-hamburger-color: $color-brand-primary;
-  $nav-off-canvas-side: right; // left, right, down
+  $nav-off-canvas-side: down; // left, right, down
   $nav-hamburger-side: right; // if off-canvas, this should match off-canvas side
   $nav-off-canvas-width: 70%;
   $nav-off-canvas-bg: $color-brand-primary;

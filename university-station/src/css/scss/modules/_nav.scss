@@ -1,17 +1,21 @@
 @charset "UTF-8";
 
+//THIS FILE IS SLOPPY AND MORE THAN 3 ITEMS DEEP NESTED
+//DO NOT COPY OR REUSE THIS FILE FOR ANY REASON!!!
+
 // Mobile off-canvas wrapers
 .outer-wrapper {
   position: relative;
   width: 100%;
-  background-color: $nav-off-canvas-bg;
-  // overflow: hidden;
+  background-color: $site-bg;
+  @include padding(0 0 $base-spacing * 2 0);
 }
 
 .inner-wrapper {
   position: relative;
-  width: 100%;
-  background-color: $site-bg;
+  width: $max-width;
+  margin: 0 auto;
+  box-shadow: $base-box-shadow;
 }
 
 // Begin Nav
@@ -24,10 +28,22 @@ nav {
     display: inline-block;
     width: 100%;
     text-align: $nav-alignment;
-    @include padding(0 $base-spacing);
+    @include padding(0 $base-spacing * 2 0 0);
     >li:hover {
       padding-bottom: 12px;
       margin-bottom: -12px;
+    }
+    > li {
+      @include margin(0 $base-spacing * 1.5);
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      @include media($tablet) {
+        margin: 0;
+      }
     }
     li {
       position: relative;
@@ -38,7 +54,6 @@ nav {
 
       a {
         display: block;
-        @include padding($base-spacing / 2, $base-spacing);
         @include font-size($nav-font-size);
         font-family: $nav-font-family;
         font-weight: $nav-font-weight;
@@ -106,6 +121,7 @@ a.close-panel {
 @include media($tablet) {
 
   .inner-wrapper {
+    width: 100%;
     @if $nav-off-canvas-side == right {
       right: 0;
     }
@@ -171,6 +187,13 @@ a.close-panel {
         border-top: none;
         transition: all $transition-time ease-in;
       }
+      >li:hover {
+        margin: 0;
+        padding: 0;
+        a {
+          color: $color-brand-tertiary;
+        }
+      }
 
       .open-nav & {
         max-height: 800px;
@@ -180,20 +203,28 @@ a.close-panel {
         float: none;
         width: 100%;
         text-align: left;
+        @include margin(0);
 
         &:hover {
 
           ul {
             position: relative;
-          }
-
-          a {
-            color: $color-brand-tertiary;
+            background-color: transparent;
+            margin: 0;
+            li {
+              a {
+                @include padding(($base-spacing * .75) $base-spacing);
+                color: $color-brand-tertiary;
+              }
+            }
           }
         }
 
         ul {
           display: block;
+          li {
+            text-align: left;
+          }
         }
 
         a {

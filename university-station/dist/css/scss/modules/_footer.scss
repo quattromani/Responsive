@@ -3,15 +3,12 @@
 footer {
   background-size: 12px 12px;
   bottom: 0;
-  border-bottom: 2px solid #bcbcbc;
   color: $footer-text;
-  overflow: hidden; //keeps box shadow from covering section
 
   .container {
-    @include padding($base-spacing);
+    @include padding($base-spacing $base-spacing * 2);
     border-top: 2px solid $color-dark-grey;
     background-color: $color-white;
-    box-shadow: $base-box-shadow;
   }
 
   span {
@@ -20,6 +17,9 @@ footer {
 
   ul {
     @include font-size($footer-font-size);
+    @include media($mobile){
+      @include margin($base-spacing);
+    }
   }
 
   a {
@@ -51,8 +51,12 @@ footer {
     float: right;
     text-align: right;
 
+    li {
+      @include padding(1px);
+    }
+
     .fa {
-      @include font-size(40);
+      @include font-size(30);
       color: $color-black;
     }
 
@@ -69,9 +73,8 @@ footer {
   }
 
   .pw-logo {
-    clear: both;
     float: right;
-    @include margin(0 auto);
+    @include margin($base-spacing auto);
 
     @include media($mobile) {
       float: none;
