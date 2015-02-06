@@ -6,54 +6,64 @@
 	}
 	section {
 		@include outer-container;
-		article {
-			@include span-columns(4);
-			@include media($tablet) {
-				@include span-columns(8);
-			}
+		@include media($mobile) {
+			@include span-columns(5);
 		}
-		aside {
+	}
+
+	article {
+		@include span-columns(14);
+		.salesModule {
+			@include span-columns(12);
+			margin-top: $base-spacing;
+		}
+		.logos {
 			@include span-columns(8);
-			@include omega();
-			float: right; 
-			@include media($tablet) {
-				@include span-columns(8);
+			margin-top: $base-spacing;
+		}
+		@include media($tablet) {
+			@include span-columns(10);
+			@include margin(0);
+			@include padding(0);
+		}
+		@include media($mobile) {
+			@include span-columns(5);
+			.salesModule {
+				@include span-columns(5);
 			}
-			.sales-teaser {
-				text-align: center;
-				#scroller_container {
-					text-align: left;
-				}
-				h3, h4, h5 {
-					text-transform: uppercase;
-				}
-				h3 {
-					@include font-size(40.5);
-				}
-				h4 {
-					@include font-size(27);
-				}
-				h5 {
-					@include font-size(24);
-				}
-				@include media($mobile) {
-					h3 {
-						@include font-size(27);
-					}
-					h4 {
-						@include font-size(18);
-					}
-					h5 {
-						@include font-size(17.25);
-					}
-				}
+			.logos {
+				@include span-columns(5);
+			}
+			img {
+				@include margin(0 auto);
 			}
 		}
 	}
-}
-#scroller_container {
-	max-height: 400px;
-	overflow: hidden;
-	background-color: rgba($color-white,0.5);
-	padding-left: 15%;
+
+	aside {
+		@include span-columns(6);
+		@include omega();
+		float: right; 
+		img {
+			float: right;
+			@include margin(0 0 $base-spacing 0);
+		}
+		@include media($tablet) {
+			@include span-columns(10);
+			@include margin(0);
+			@include padding(0);
+			img {
+				float: left;
+				@include margin($base-spacing);
+			}
+		}
+		@include media($mobile) {
+			@include span-columns(5);
+			img {
+				float: none;
+				@include margin($base-spacing auto);
+			}
+		}
+	}
+
 }

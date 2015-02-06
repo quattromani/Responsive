@@ -3,14 +3,14 @@
   @import "../vendor/neat/neat-helpers";
 
   // =Grid settings
-  $gutter: em(20);
-  $grid-columns: 12;
+  $gutter: em(10);
+  $grid-columns: 20;
   // $max-width: em(990);
   $max-width: 1000px;
 
   // =Breakpoints
-  $tablet: new-breakpoint(max-width 1000px 8);
-  $mobile: new-breakpoint(max-width 480px 4);
+  $tablet: new-breakpoint(max-width 1000px 10);
+  $mobile: new-breakpoint(max-width 600px 5);
 
   $base-spacing: 1em !default;
   $pad: $base-spacing;
@@ -27,10 +27,10 @@
   $color-dark-grey: #999;
 
   // =Brand Palette
-  $color-brand-primary: #333192; // Headings
+  $color-brand-primary: #3c2415; // Headings
   $color-brand-secondary: #4c4d4f; // Text
   $color-brand-tertiary: #eeede8; // Background
-  $color-brand-quaternary: #e86d1f; // Accent
+  $color-brand-quaternary: #bd5b1d; // Accent
   $color-brand-quinary: #fff; // Accent=
 
   $color-brand-primary-complimentary: red;

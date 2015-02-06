@@ -3546,6 +3546,8 @@ ul.tabs {
   font-size: 4.5rem;
   font-weight: 400;
   color: #000; }
+.home .content {
+  padding: 0; }
 
 .carouselOverlay-wrap {
   width: 72.8125em;

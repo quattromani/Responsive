@@ -4,6 +4,9 @@
 		font-weight: 400;
 		color: $color-black;
 	}
+	.content {
+		@include padding(0);
+	}
 }
 .carouselOverlay-wrap {
 		width: $carousel-width;

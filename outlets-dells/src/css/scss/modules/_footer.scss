@@ -1,26 +1,13 @@
 @charset "UTF-8";
 
 footer {
-  .container {
-    @include outer-container;
-    @include media($tablet) {
-      padding: 0 1em;
-    }
-    .leaderboard {
-      background-image: url(/mimages/ssmgse15/foot-ad.jpg);
-      background-position: center;
-      height: 115px;
-      @include span-columns(9);
-      @include media($mobile) {
-        @include span-columns(4);
-        float: none;
-        height: auto;
-      }
-    }
-  }
-  @include padding($base-spacing 0);
+  @include padding($base-spacing);
   background-color: $footer-bg;
   color: $footer-text;
+
+  .container {
+    @include outer-container;
+  }
 
   span {
     @include font-size($footer-font-size);
@@ -28,6 +15,9 @@ footer {
 
   ul {
     @include font-size($footer-font-size);
+    @include media($tablet) {
+      @include padding($base-spacing);
+    }
   }
 
   li {
