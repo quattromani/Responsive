@@ -2567,7 +2567,9 @@ hr {
     display: table; }
 
 .content {
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #fff;
+  padding: 1em 0; }
   @media screen and (max-width: 1020px) {
     .content {
       padding: 0 1em; } }
@@ -2575,10 +2577,7 @@ hr {
     background-color: #fff; }
 
 section {
-  padding: 1em;
-  overflow: auto;
-  background-color: #fff;
-  box-shadow: 0 0 20px 0px #4e4e56; }
+  overflow: hidden; }
   @media screen and (max-width: 600px) {
     section {
       float: left;
@@ -3031,6 +3030,25 @@ footer {
     .spotlightSidebar-cnt-row img {
       float: none; } }
 
+.clearfix {
+  clear: both;
+  overflow: auto; }
+
+.bubble-wrpr {
+  max-width: 96%;
+  overflow: hidden;
+  margin: 1em auto; }
+  .bubble-wrpr h1 {
+    color: #000;
+    font-weight: bold; }
+
+@media screen and (max-width: 1020px) {
+  .carouselFancy600 {
+    display: none; }
+
+  .mf_feature___featureImage {
+    width: 100%;
+    clear: both; } }
 .styleguide article {
   float: left; }
 .styleguide aside {

@@ -7,20 +7,20 @@
 
 .content {
   overflow: hidden; //keeps box shadow from covering header
+  background-color: $color-white;
+  @include padding($base-spacing 0);
 
   @include media($tablet) {
     @include padding(0 $base-spacing);
   }
+
   .container {
     background-color: $color-white;
   }
 }
 
 section {
-  @include padding($base-spacing);
-  overflow: auto;
-  background-color: $color-white;
-  box-shadow: $base-box-shadow;
+  overflow: hidden;
   @include media($mobile) {
     @include span-columns(4);
   }
