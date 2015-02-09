@@ -1,0 +1,17 @@
+.store {
+	#dirmapbutton { display: none; }
+	.recordAction___viewDirectoryMap { display: none; }
+	.storeContactSew-bubble-wrpr { display: none; }
+
+	.StorePromosForStores-cnt-row {
+		border-bottom: 1px solid $box-border-color;
+		@include margin($base-spacing 0);
+		@include padding(0 0 $base-spacing 0);
+	}
+
+	.span-8 {
+		border-bottom: 1px solid $box-border-color;
+		@include margin(0 0 $base-spacing * 2 0);
+		@include padding(0 0 $base-spacing * 1.5 0);
+	}
+}

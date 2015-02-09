@@ -44,6 +44,9 @@ footer {
     float: right;
     ul {
       @include horizontal-list(piped);
+      li:last-child:after {
+        content: '';
+      }
     }
     @include media($mobile) {
       float: none;

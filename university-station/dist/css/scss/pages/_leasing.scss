@@ -1,0 +1,7 @@
+.info {
+	article {
+		ul {
+			@include bulleted;
+		}
+	}
+}

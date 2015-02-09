@@ -1,4 +1,12 @@
 .directory {
+	.directory-listing {
+		ul li a {
+			display: block;
+		}
+	}
+	.directory-form {
+		button { display: none; }
+	}
 	ul.directory-form li {
 		float: left;
 		margin-right: $second-spacing;
@@ -8,6 +16,7 @@
 		li {
 			border-bottom: 1px dotted $color-grey;
 			@include padding($base-spacing 0);
+			height: 175px;
 			&:last-child {
 				border: none;
 			}

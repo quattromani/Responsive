@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+body {
+  background-color: $site-bg;
+}
+
 .container {
   @include outer-container;
   position: relative;
@@ -54,6 +58,9 @@ aside {
     @include image-bordered;
     @include image-shadowed;
     overflow: hidden; //added this so the img won't stick out...
+    @include media($mobile) {
+      box-shadow: none;
+    }
   }
 }
 

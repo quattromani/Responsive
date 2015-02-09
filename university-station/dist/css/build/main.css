@@ -2447,7 +2447,8 @@ input[type="file"] {
 select {
   margin-bottom: 1em;
   max-width: 100%;
-  width: auto; }
+  width: auto;
+  margin-left: 1px; }
 
 .fillit {
   display: none; }
@@ -2556,6 +2557,9 @@ hr {
   border: 0;
   border-top: 1px solid #ccc; }
 
+body {
+  background-color: #cdd8d4; }
+
 .container {
   max-width: 72.8125em;
   margin-left: auto;
@@ -2638,6 +2642,12 @@ aside {
     border: 0.5em solid #fff;
     box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.6);
     overflow: hidden; }
+    @media screen and (max-width: 600px) {
+      aside img, aside .adBlock-300-250 {
+        border: none; } }
+    @media screen and (max-width: 600px) {
+      aside img, aside .adBlock-300-250 {
+        box-shadow: none; } }
 
 .mobile-show {
   display: none; }
@@ -2694,7 +2704,6 @@ header {
 .outer-wrapper {
   position: relative;
   width: 100%;
-  background-color: #cdd8d4;
   padding: 0 0 2em; }
 
 .inner-wrapper {
@@ -2706,12 +2715,13 @@ header {
 nav {
   position: relative;
   background-color: transparent;
-  margin-top: -48px; }
+  margin-top: -43px; }
   nav ul.menu {
     display: inline-block;
     width: 100%;
     text-align: right;
-    padding: 0 2em 0 0; }
+    padding: 0 2em 0 0;
+    margin: 0; }
     nav ul.menu > li:hover {
       padding-bottom: 12px;
       margin-bottom: -12px; }
@@ -2730,7 +2740,8 @@ nav {
       font-size: 18px;
       font-size: 1.8rem;
       line-height: normal;
-      text-align: center; }
+      text-align: center;
+      vertical-align: middle; }
       nav ul.menu li a {
         display: block;
         font-size: 18px;
@@ -2758,7 +2769,7 @@ nav {
         background-color: #fff;
         z-index: 999;
         text-align: center;
-        margin-top: 12px; }
+        margin-top: 10px; }
         nav ul.menu li:hover ul li {
           display: block;
           min-width: 10.5em;
@@ -2807,6 +2818,7 @@ a.close-panel {
     nav ul.menu {
       border-top: 1px solid #149165;
       background-color: #149165;
+      padding: 0;
       max-height: 0;
       overflow-y: hidden;
       border-top: none;
@@ -2852,16 +2864,16 @@ a.close-panel {
 .search label, .search button {
   display: none; }
 
-input[type=search]::-webkit-input-placeholder {
+input.search-field::-webkit-input-placeholder {
   font-family: "FontAwesome"; }
-input[type=search]::-moz-placeholder {
+input.search-field::-moz-placeholder {
   font-family: "FontAwesome"; }
-input[type=search]:-moz-placeholder {
+input.search-field:-moz-placeholder {
   font-family: "FontAwesome"; }
-input[type=search]:-ms-input-placeholder {
+input.search-field:-ms-input-placeholder {
   font-family: "FontAwesome"; }
 @media screen and (max-width: 1020px) {
-  input[type=search] {
+  input.search-field {
     width: calc(100% - 2em);
     margin: 0.5em 1em; } }
 
@@ -2902,7 +2914,7 @@ footer {
   bottom: 0;
   color: #1b1b1b; }
   footer .container {
-    padding: 1em 2em;
+    padding: 2em;
     border-top: 2px solid #4e4e56;
     background-color: #fff; }
   footer span {
@@ -2919,6 +2931,8 @@ footer {
     font-weight: 700; }
   footer .mall-details {
     float: left; }
+    footer .mall-details li {
+      display: inline-block; }
     @media screen and (max-width: 600px) {
       footer .mall-details {
         float: none;
@@ -2959,7 +2973,7 @@ footer {
     margin-bottom: 0.5em; }
   footer .pw-logo {
     float: right;
-    margin: 1em auto; }
+    margin: 0 auto; }
     @media screen and (max-width: 600px) {
       footer .pw-logo {
         float: none;
@@ -3034,21 +3048,34 @@ footer {
   clear: both;
   overflow: auto; }
 
-.bubble-wrpr {
-  max-width: 96%;
-  overflow: hidden;
-  margin: 1em auto; }
-  .bubble-wrpr h1 {
+.trends .bubble-wrpr {
+  float: left;
+  display: block;
+  margin-right: 1.9356%;
+  width: 66.02147%;
+  margin: 2em;
+  overflow: hidden; }
+  .trends .bubble-wrpr:last-child {
+    margin-right: 0; }
+  .trends .bubble-wrpr .bubble-wrpr {
+    width: 100%;
+    margin: 0; }
+  .trends .bubble-wrpr h1 {
     color: #000;
     font-weight: bold; }
-
 @media screen and (max-width: 1020px) {
-  .carouselFancy600 {
+  .trends .carouselFancy600 {
     display: none; }
-
-  .mf_feature___featureImage {
+  .trends .mf_feature___featureImage {
     width: 100%;
     clear: both; } }
+
+.fancyCarouselLeftArrow img {
+  float: right; }
+
+.textholder {
+  height: auto !important; }
+
 .styleguide article {
   float: left; }
 .styleguide aside {
@@ -3502,6 +3529,10 @@ ul.tabs {
 .sy-filler.ready {
   transition: padding 600ms ease; }
 
+.directory .directory-listing ul li a {
+  display: block; }
+.directory .directory-form button {
+  display: none; }
 .directory ul.directory-form li {
   float: left;
   margin-right: 2em; }
@@ -3514,7 +3545,8 @@ ul.tabs {
     margin-right: 0; }
   .directory ul.left li, .directory ul.right li, .directory ul.dine li {
     border-bottom: 1px dotted #ccc;
-    padding: 1em 0; }
+    padding: 1em 0;
+    height: 175px; }
     .directory ul.left li:last-child, .directory ul.right li:last-child, .directory ul.dine li:last-child {
       border: none; }
 @media screen and (max-width: 1020px) {
@@ -3545,7 +3577,9 @@ ul.tabs {
 .home h2 {
   font-size: 4.5rem;
   font-weight: 400;
-  color: #000; }
+  color: #000;
+  letter-spacing: 1px;
+  margin: 0; }
 .home .content {
   padding: 0; }
 
@@ -3562,10 +3596,12 @@ ul.tabs {
     color: #2a2a2a;
     position: relative;
     z-index: 99; }
+    .carouselOverlay-wrap .carouselOverlay p.h2 {
+      color: #1b1b1b; }
 
-.home-img {
+.home-banner {
   width: 100%;
-  height: 100%;
+  height: auto;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -3593,5 +3629,34 @@ input[type="button"] {
 #map-canvas {
   max-width: 100%; }
 
+.info article img {
+  float: left;
+  margin: 0 1em 1em 0; }
+
 #jobWidget {
   margin: 0 0 2em; }
+
+.job-preview {
+  overflow: hidden; }
+
+.info article ul ~ ul {
+  margin-bottom: 0; }
+.info article ul li {
+  list-style: outside disc;
+  margin-left: 1em;
+  border-bottom: 0; }
+
+.store #dirmapbutton {
+  display: none; }
+.store .recordAction___viewDirectoryMap {
+  display: none; }
+.store .storeContactSew-bubble-wrpr {
+  display: none; }
+.store .StorePromosForStores-cnt-row {
+  border-bottom: 1px solid #e1e1e1;
+  margin: 1em 0;
+  padding: 0 0 1em; }
+.store .span-8 {
+  border-bottom: 1px solid #e1e1e1;
+  margin: 0 0 2em;
+  padding: 0 0 1.5em; }

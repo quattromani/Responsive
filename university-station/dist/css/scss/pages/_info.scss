@@ -8,3 +8,13 @@ input[type="button"] {
 #map-canvas {
 	max-width: 100%;
 }
+
+// Info pages
+.info {
+	article {
+		img {
+			float: left;
+			@include margin(0 $base-spacing $base-spacing 0);
+		}
+	}
+}

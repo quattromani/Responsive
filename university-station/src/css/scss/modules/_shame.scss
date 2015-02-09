@@ -3,20 +3,35 @@
   overflow: auto;
 }
 
-.bubble-wrpr {
-  max-width: 96%;
-  overflow: hidden;
-  margin: 1em auto;
-  h1 {
-    color: $color-black;
-    font-weight: bold;
+.trends {
+
+  .bubble-wrpr {
+    @include span-columns(8);
+    @include margin($base-spacing * 2);
+    overflow: hidden;
+    .bubble-wrpr {
+      width: 100%;
+      @include margin(0);
+    }
+    h1 {
+      color: $color-black;
+      font-weight: bold;
+    }
+  }
+
+  @include media($tablet) {
+    .carouselFancy600 { display: none; }
+    .mf_feature___featureImage {
+      width: 100%;
+      clear: both;
+    }
   }
 }
 
-@include media($tablet) {
-  .carouselFancy600 { display: none; }
-  .mf_feature___featureImage {
-    width: 100%;
-    clear: both;
-  }
+.fancyCarouselLeftArrow img {
+  float: right;
+}
+
+.textholder {
+  height: auto!important;
 }

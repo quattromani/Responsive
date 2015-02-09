@@ -6,7 +6,7 @@ footer {
   color: $footer-text;
 
   .container {
-    @include padding($base-spacing $base-spacing * 2);
+    @include padding($base-spacing * 2);
     border-top: 2px solid $color-dark-grey;
     background-color: $color-white;
   }
@@ -29,6 +29,9 @@ footer {
 
   .mall-details {
     float:left;
+    li {
+      display: inline-block;
+    }
 
     @include media($mobile) {
       float: none;
@@ -74,7 +77,7 @@ footer {
 
   .pw-logo {
     float: right;
-    @include margin($base-spacing auto);
+    @include margin(0 auto);
 
     @include media($mobile) {
       float: none;

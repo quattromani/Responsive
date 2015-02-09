@@ -10,6 +10,10 @@
 
 @mixin image-bordered {
   border: ($base-spacing / 2) solid $color-white;
+  
+  @include media($mobile){
+    border: none;
+  }
 }
 
 @mixin image-shadowed {
