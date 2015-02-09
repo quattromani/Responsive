@@ -56,7 +56,7 @@ nav {
 
   ul.menu {
     @include margin(0);
-    @include padding(0);
+    @include padding(0 $base-spacing);
     display: inline-block;
     width: 100%;
     text-align: $nav-alignment;
@@ -67,14 +67,14 @@ nav {
       @include font-size($nav-font-size);
       line-height: normal;
       text-align: center;
-      @include padding($base-spacing / 1.5 $base-spacing 0);
+      @include padding($base-spacing $base-spacing / 2);
 
       &:hover {
         background-color: $color-brand-primary;
       }
 
       &.search {
-        @include padding($base-spacing / 4 $base-spacing);
+        @include padding($base-spacing / 2 0 0 0);
         &:hover { background-color: transparent; }
       }
 
@@ -86,7 +86,6 @@ nav {
         vertical-align: middle;
         color: $nav-color;
         text-transform: $nav-text-transform;
-        padding-bottom: $base-spacing / 1.4;
 
         &:hover {
           color: $color-white;
@@ -105,6 +104,7 @@ nav {
           display: block;
           background-color: rgba($color-brand-primary, .65);
           z-index: 999;
+          @include margin ($base-spacing 0 0 0);
 
           li {
             display: block;
@@ -268,8 +268,8 @@ a.close-panel {
   }
 }
 
-#socialSearch {
-  label, button { display:none; }
+.search {
+  label, button { display: none; }
 }
 
 input[type=search] {

@@ -2644,7 +2644,7 @@ nav {
   background-color: #bd5b1d; }
   nav ul.menu {
     margin: 0;
-    padding: 0;
+    padding: 0 1em;
     display: inline-block;
     width: 100%;
     text-align: left; }
@@ -2655,11 +2655,11 @@ nav {
       font-size: 1.4rem;
       line-height: normal;
       text-align: center;
-      padding: 0.66667em 1em 0; }
+      padding: 1em 0.5em; }
       nav ul.menu li:hover {
         background-color: #3c2415; }
       nav ul.menu li.search {
-        padding: 0.25em 1em; }
+        padding: 0.5em 0 0; }
         nav ul.menu li.search:hover {
           background-color: transparent; }
       nav ul.menu li a {
@@ -2670,8 +2670,7 @@ nav {
         font-weight: 800;
         vertical-align: middle;
         color: #fff;
-        text-transform: uppercase;
-        padding-bottom: 0.71429em; }
+        text-transform: uppercase; }
         nav ul.menu li a:hover {
           color: #fff;
           text-decoration: none; }
@@ -2686,7 +2685,8 @@ nav {
         position: absolute;
         display: block;
         background-color: rgba(60, 36, 21, 0.65);
-        z-index: 999; }
+        z-index: 999;
+        margin: 1em 0 0; }
         nav ul.menu li:hover ul li {
           display: block;
           min-width: 10.5em;
@@ -2769,7 +2769,7 @@ a.close-panel {
   a.open-panel
    {
     display: inline-block; } }
-#socialSearch label, #socialSearch button {
+.search label, .search button {
   display: none; }
 
 input[type=search]::-webkit-input-placeholder {
