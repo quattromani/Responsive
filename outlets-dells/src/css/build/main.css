@@ -2860,6 +2860,8 @@ footer {
         padding: 0 0.25em 0 0.5em; }
       footer .mall-details ul li.js-last:after {
         content: ''; }
+    footer .mall-details ul li:last-child:after {
+      content: ''; }
     @media screen and (max-width: 600px) {
       footer .mall-details {
         float: none;
@@ -3221,7 +3223,7 @@ ul.tabs {
 /* element that wraps the slides */
 .sy-slides-wrap {
   position: relative;
-  height: 100%;
+  height: auto;
   width: 100%; }
 
 .sy-slides-wrap:hover .sy-controls {
