@@ -1919,7 +1919,7 @@ section {
    ========================== */
 h1,
 .h1 {
-  font-family: "Prata", serif;
+  font-family: "swissboldcond", Arial, Helvetica, sans-serif;
   font-size: 32px;
   font-size: 3.2rem;
   font-weight: 200;
@@ -1928,7 +1928,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: "Prata", serif;
+  font-family: "swissboldcond", Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-size: 2.4rem;
   font-weight: 200;
@@ -1937,7 +1937,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: "swissboldcond", Arial, Helvetica, sans-serif;
   font-size: 22px;
   font-size: 2.2rem;
   font-weight: 200;
@@ -1946,7 +1946,7 @@ h3,
 
 h4,
 .h4 {
-  font-family: "Prata", serif;
+  font-family: "swissboldcond", Arial, Helvetica, sans-serif;
   font-size: 21px;
   font-size: 2.1rem;
   font-weight: 200;
@@ -1955,7 +1955,7 @@ h4,
 
 h5,
 .h5 {
-  font-family: "Prata", serif;
+  font-family: "swissboldcond", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: 700;
@@ -1964,7 +1964,7 @@ h5,
 
 h6,
 .h6 {
-  font-family: "Prata", serif;
+  font-family: "swissboldcond", Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: 100;
@@ -2537,7 +2537,8 @@ hr {
       padding: 0 1em; } }
 
 section {
-  overflow: auto; }
+  overflow: auto;
+  border-bottom: 1px solid #ccc; }
   @media screen and (max-width: 600px) {
     section {
       float: left;
@@ -2554,24 +2555,30 @@ article {
   float: left;
   display: block;
   margin-right: 1.40138%;
-  width: 39.15917%;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-right: 1em; }
+  width: 69.57959%;
+  padding: 1em; }
   article::after {
     clear: both;
     content: "";
     display: table; }
   article:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 1000px) {
+    article {
+      float: left;
+      display: block;
+      margin-right: 2.84259%;
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+      article:last-child {
+        margin-right: 0; } }
   @media screen and (max-width: 600px) {
     article {
       float: left;
       display: block;
       margin-right: 5.85151%;
-      width: 78.8297%;
-      padding: 0;
-      border: none; }
+      width: 100%; }
       article:last-child {
         margin-right: 0; } }
 
@@ -2579,18 +2586,27 @@ aside {
   float: left;
   display: block;
   margin-right: 1.40138%;
-  width: 18.8789%;
-  padding-left: 1em; }
+  width: 29.01904%; }
   aside:last-child {
     margin-right: 0; }
+  aside img {
+    margin: 0 0 1em; }
+  @media screen and (max-width: 1000px) {
+    aside {
+      float: left;
+      display: block;
+      margin-right: 2.84259%;
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+      aside:last-child {
+        margin-right: 0; } }
   @media screen and (max-width: 600px) {
     aside {
       float: left;
       display: block;
       margin-right: 5.85151%;
-      width: 78.8297%;
-      padding: 0;
-      border: none; }
+      width: 100%; }
       aside:last-child {
         margin-right: 0; } }
 
@@ -2601,6 +2617,8 @@ header {
   position: relative;
   padding: 1em;
   background-color: #fff; }
+  header p {
+    float: right; }
   header .hours {
     float: right; }
   header a.login {
@@ -3055,7 +3073,7 @@ footer {
   font-family: Arial, Helvetica, sans-serif; }
 
 .heading-font-family {
-  font-family: "Prata", serif; }
+  font-family: "swissboldcond", Arial, Helvetica, sans-serif; }
 
 .mall-logo {
   display: inline-block;
@@ -3501,7 +3519,8 @@ ul.tabs {
 .home section {
   max-width: 1000px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  border: none; }
   .home section::after {
     clear: both;
     content: "";
@@ -3518,7 +3537,8 @@ ul.tabs {
   float: left;
   display: block;
   margin-right: 1.40138%;
-  width: 69.57959%; }
+  width: 69.57959%;
+  padding: 0; }
   .home article:last-child {
     margin-right: 0; }
   .home article .salesModule {
@@ -3607,6 +3627,10 @@ ul.tabs {
       .home aside img {
         float: none;
         margin: 1em auto; } }
+
+.facebook-box {
+  border: 1px solid #ccc;
+  clear: both; }
 
 .info .left {
   float: left;

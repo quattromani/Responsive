@@ -5,6 +5,10 @@ header {
   @include padding($base-spacing);
   background-color: $header-bg;
 
+  p {
+    float: right;
+  }
+
   .hours { float: right; }
 
   a {

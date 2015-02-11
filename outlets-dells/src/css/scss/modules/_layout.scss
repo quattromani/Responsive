@@ -17,6 +17,7 @@
 
 section {
   overflow: auto;
+  border-bottom: $base-border;
 
   @include media($mobile) {
     @include span-columns(4);
@@ -25,24 +26,35 @@ section {
 
 article {
   @include outer-container;
-  @include span-columns(8);
-  @include margin(0 null);
-  @include padding(null $base-spacing null null);
-  @include media($mobile) {
-    @include span-columns(4);
+  @include span-columns(14);
+  @include padding($base-spacing);
+
+  @include media($tablet) {
+    @include span-columns(10);
+    @include margin(0);
     @include padding(0);
-    border: none;
+  }
+
+  @include media($mobile) {
+    @include span-columns(5);
   }
 }
 
 aside {
-  @include span-columns(4);
-  @include padding(null null null $base-spacing);
+  @include span-columns(6);
+
+  img {
+    @include margin(0 0 $base-spacing 0);
+  }
+
+  @include media($tablet) {
+    @include span-columns(10);
+    @include margin(0);
+    @include padding(0);
+  }
 
   @include media($mobile) {
-    @include span-columns(4);
-    @include padding(0);
-    border: none;
+    @include span-columns(5);
   }
 }
 

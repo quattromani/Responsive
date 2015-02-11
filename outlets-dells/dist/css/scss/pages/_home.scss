@@ -4,8 +4,10 @@
 		background-position: center;
 		background-size: cover;
 	}
+
 	section {
 		@include outer-container;
+		border: none;
 		@include media($mobile) {
 			@include span-columns(5);
 		}
@@ -13,6 +15,7 @@
 
 	article {
 		@include span-columns(14);
+		@include padding(0);
 		.salesModule {
 			@include span-columns(12);
 			margin-top: $base-spacing;
@@ -65,5 +68,8 @@
 			}
 		}
 	}
-
+}
+.facebook-box {
+	border: $base-border;
+	clear: both;
 }
