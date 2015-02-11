@@ -1,7 +1,12 @@
 .directory {
 	.directory-listing {
+		text-align: center;
 		ul li a {
 			display: block;
+			color: $color-black;
+		}
+		img {
+			margin: 0 auto;
 		}
 	}
 	.directory-form {
