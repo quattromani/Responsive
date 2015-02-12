@@ -1,21 +1,58 @@
 .directory {
-	a {
-		color: $color-black;
-		&:hover {
-			color: $color-brand-primary;
-		}
-	}
 	button {
 		@include margin(1em 0 2em);
 		a {
 			color: $color-white;
 		}
 	}
-	@include media($mobile) {
+	@include media($tablet) {
 		aside { display: none; }
+	}
+}
+.directory-listing {
+	.left {
+		float: left;
+		width: 48%;
+	}
+	.right {
+		float: right;
+		width: 48%;
+	}
+	li {
+		border-bottom: $base-border;
+		text-align: center;
+		@include padding($base-spacing 0);
+		&:last-child {
+			border: none;
+		}
+	}
+	img {
+		margin: 0 auto;
+		max-height: 90px;
+	}
+	a {
+		color: $color-black;
+		display: block;
+		@include margin($base-spacing/2 0);
+		&:hover {
+			color: $color-brand-primary;
+		}
+	}
+	@include media($mobile) {
+		.left {
+			float: none;
+			width: 100%;
+		}
+		.right {
+			float: none;
+			width: 100%;
+		}
 	}
 }
 
 #dirmapbutton {
 	margin-top: $base-spacing;
+}
+.directory-form {
+	@include padding($base-spacing);
 }

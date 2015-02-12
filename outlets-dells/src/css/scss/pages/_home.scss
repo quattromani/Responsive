@@ -1,10 +1,4 @@
 .home {
-	.inner-wrapper {
-		background-image: url(/mimages/ssmgse15/bg-home-vero-beach.jpg);
-		background-position: center;
-		background-size: cover;
-	}
-
 	section {
 		@include outer-container;
 		border: none;
@@ -24,18 +18,18 @@
 			@include span-columns(8);
 			margin-top: $base-spacing;
 		}
+		// @include media($tablet) {
+		// 	@include span-columns(10);
+		// 	@include margin(0);
+		// 	@include padding(0);
+		// }
 		@include media($tablet) {
 			@include span-columns(10);
-			@include margin(0);
-			@include padding(0);
-		}
-		@include media($mobile) {
-			@include span-columns(5);
 			.salesModule {
-				@include span-columns(5);
+				@include span-columns(10);
 			}
 			.logos {
-				@include span-columns(5);
+				@include span-columns(10);
 			}
 			img {
 				@include margin(0 auto);
@@ -51,21 +45,22 @@
 			float: right;
 			@include margin(0 0 $base-spacing 0);
 		}
+		// @include media($tablet) {
+		// 	@include span-columns(10);
+		// 	@include margin(0);
+		// 	@include padding(0);
+		// 	img {
+		// 		float: left;
+		// 		@include margin($base-spacing);
+		// 	}
+		// }
 		@include media($tablet) {
 			@include span-columns(10);
-			@include margin(0);
-			@include padding(0);
-			img {
-				float: left;
-				@include margin($base-spacing);
-			}
-		}
-		@include media($mobile) {
-			@include span-columns(5);
-			img {
+			img, .facebook-box {
 				float: none;
 				@include margin($base-spacing auto);
 			}
+			.facebook-box { width: 300px; }
 		}
 	}
 }

@@ -2544,7 +2544,7 @@ section {
       float: left;
       display: block;
       margin-right: 5.85151%;
-      width: 78.8297%; }
+      width: 100%; }
       section:last-child {
         margin-right: 0; } }
 
@@ -2593,22 +2593,7 @@ aside {
     margin: 0 0 1em; }
   @media screen and (max-width: 1000px) {
     aside {
-      float: left;
-      display: block;
-      margin-right: 2.84259%;
-      width: 100%;
-      margin: 0;
-      padding: 0; }
-      aside:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 600px) {
-    aside {
-      float: left;
-      display: block;
-      margin-right: 5.85151%;
-      width: 100%; }
-      aside:last-child {
-        margin-right: 0; } }
+      display: none; } }
 
 iframe[name="google_conversion_frame"] {
   display: none; }
@@ -2621,6 +2606,9 @@ header {
     float: right; }
   header .hours {
     float: right; }
+  @media screen and (max-width: 1000px) {
+    header .hours {
+      display: none; } }
   header a.login {
     font-size: 12px;
     font-size: 1.2rem;
@@ -2781,7 +2769,7 @@ a.close-panel {
 
   .open-panel {
     position: absolute;
-    left: 1em;
+    right: 1em;
     margin-top: -3em; }
 
   a.open-panel
@@ -2939,12 +2927,17 @@ footer {
   @media screen and (max-width: 600px) {
     .sticky-footer {
       text-align: center;
-      position: relative; } }
+      position: relative;
+      height: 3em; } }
   .sticky-footer p {
     font-family: "swissboldcond", Arial, Helvetica, sans-serif;
     font-weight: 800;
     float: left;
     padding: 1em; }
+    @media screen and (max-width: 600px) {
+      .sticky-footer p {
+        padding: 0.5em;
+        font-size: 12px; } }
   .sticky-footer a {
     color: #fff; }
     .sticky-footer a:hover {
@@ -3231,7 +3224,7 @@ ul.tabs {
     transform: translateY(-20%) translateX(-10%); } }
 /* added to the original element calling slippry */
 .sy-box.sy-loading {
-  background: url(/images/sy-loader.gif) 50% 50% no-repeat;
+  background: url(/mimages/craig15/sy-loader.gif) 50% 50% no-repeat;
   background-size: 32px;
   min-height: 40px; }
 
@@ -3475,20 +3468,48 @@ ul.tabs {
 .sy-filler.ready {
   transition: padding 600ms ease; }
 
-.directory a {
-  color: #000; }
-  .directory a:hover {
-    color: #3c2415; }
 .directory button {
   margin: 1em 0 2em; }
   .directory button a {
     color: #fff; }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .directory aside {
     display: none; } }
 
+.directory-listing .left {
+  float: left;
+  width: 48%; }
+.directory-listing .right {
+  float: right;
+  width: 48%; }
+.directory-listing li {
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 1em 0; }
+  .directory-listing li:last-child {
+    border: none; }
+.directory-listing img {
+  margin: 0 auto;
+  max-height: 90px; }
+.directory-listing a {
+  color: #000;
+  display: block;
+  margin: 0.5em 0; }
+  .directory-listing a:hover {
+    color: #3c2415; }
+@media screen and (max-width: 600px) {
+  .directory-listing .left {
+    float: none;
+    width: 100%; }
+  .directory-listing .right {
+    float: none;
+    width: 100%; } }
+
 #dirmapbutton {
   margin-top: 1em; }
+
+.directory-form {
+  padding: 1em; }
 
 .hours .left {
   float: left;
@@ -3512,10 +3533,6 @@ ul.tabs {
     left: null;
     text-align: center; } }
 
-.home .inner-wrapper {
-  background-image: url(/mimages/ssmgse15/bg-home-vero-beach.jpg);
-  background-position: center;
-  background-size: cover; }
 .home section {
   max-width: 1000px;
   margin-left: auto;
@@ -3562,30 +3579,20 @@ ul.tabs {
       float: left;
       display: block;
       margin-right: 2.84259%;
-      width: 100%;
-      margin: 0;
-      padding: 0; }
-      .home article:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 600px) {
-    .home article {
-      float: left;
-      display: block;
-      margin-right: 5.85151%;
       width: 100%; }
       .home article:last-child {
         margin-right: 0; }
       .home article .salesModule {
         float: left;
         display: block;
-        margin-right: 5.85151%;
+        margin-right: 2.84259%;
         width: 100%; }
         .home article .salesModule:last-child {
           margin-right: 0; }
       .home article .logos {
         float: left;
         display: block;
-        margin-right: 5.85151%;
+        margin-right: 2.84259%;
         width: 100%; }
         .home article .logos:last-child {
           margin-right: 0; }
@@ -3608,25 +3615,14 @@ ul.tabs {
       float: left;
       display: block;
       margin-right: 2.84259%;
-      width: 100%;
-      margin: 0;
-      padding: 0; }
-      .home aside:last-child {
-        margin-right: 0; }
-      .home aside img {
-        float: left;
-        margin: 1em; } }
-  @media screen and (max-width: 600px) {
-    .home aside {
-      float: left;
-      display: block;
-      margin-right: 5.85151%;
       width: 100%; }
       .home aside:last-child {
         margin-right: 0; }
-      .home aside img {
+      .home aside img, .home aside .facebook-box {
         float: none;
-        margin: 1em auto; } }
+        margin: 1em auto; }
+      .home aside .facebook-box {
+        width: 300px; } }
 
 .facebook-box {
   border: 1px solid #ccc;

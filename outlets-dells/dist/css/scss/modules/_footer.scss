@@ -111,12 +111,17 @@ footer {
   @include media($mobile) {
     text-align: center;
     position: relative;
+    height: 3em;
   }
   p {
     font-family: $nav-font-family;
     font-weight: $nav-font-weight;
     float: left;
     @include padding($base-spacing);
+    @include media($mobile) {
+      @include padding($base-spacing / 2);
+      font-size: 12px; //couldn't get $small-body-text to work...
+    }
   }
   a {
     color: $color-white;

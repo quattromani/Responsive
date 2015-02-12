@@ -20,7 +20,7 @@ section {
   border-bottom: $base-border;
 
   @include media($mobile) {
-    @include span-columns(4);
+    @include span-columns(5);
   }
 }
 
@@ -48,13 +48,14 @@ aside {
   }
 
   @include media($tablet) {
-    @include span-columns(10);
-    @include margin(0);
-    @include padding(0);
+    display: none;
+    // @include span-columns(10);
+    // @include margin(0);
+    // @include padding(0);
   }
 
   @include media($mobile) {
-    @include span-columns(5);
+    // @include span-columns(5);
   }
 }
 
