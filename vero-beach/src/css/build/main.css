@@ -2617,7 +2617,7 @@ header {
       text-transform: uppercase; }
 
 .mall-logo img {
-  max-width: 200px; }
+  max-width: 175px; }
 
 .outer-wrapper {
   position: relative;
@@ -3046,7 +3046,8 @@ footer {
 
 .mall-logo {
   display: inline-block;
-  z-index: 9999; }
+  z-index: 9999;
+  position: relative; }
   @media screen and (max-width: 1000px) {
     .mall-logo {
       display: block;

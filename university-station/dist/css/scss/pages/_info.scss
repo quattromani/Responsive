@@ -12,9 +12,12 @@ input[type="button"] {
 // Info pages
 .info {
 	article {
+		p {
+			margin-bottom: $base-spacing;
+		}
 		img {
 			float: left;
-			@include margin(0 $base-spacing $base-spacing 0);
+			@include margin(0 $base-spacing 0 0);
 		}
 	}
 }
