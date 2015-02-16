@@ -1,0 +1,18 @@
+.job-logo {
+	@include margin($base-spacing 0);
+}
+.jobTitle {
+	font-family: $heading-font-family;
+	font-size: 2.5rem;
+	color: $heading-color-primary;
+}
+
+ul.job {
+	@include margin($base-spacing 0);
+	@include padding(0 0 $base-spacing 0);
+	border-bottom: $base-border;
+	.jobTitle {
+		font-size: 2.2rem;
+		@include margin($base-spacing / 4 0);
+	}
+}

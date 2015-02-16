@@ -3661,5 +3661,27 @@ ul.tabs {
   .styleguide aside:last-child {
     margin-right: 0; }
 
+#map-canvas {
+  margin: 1em 0; }
+
+input#starting {
+  margin: 1em 0; }
+
+.job-logo {
+  margin: 1em 0; }
+
+.jobTitle {
+  font-family: "swissboldcond", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  color: #3c2415; }
+
+ul.job {
+  margin: 1em 0;
+  padding: 0 0 1em;
+  border-bottom: 1px solid #ccc; }
+  ul.job .jobTitle {
+    font-size: 2.2rem;
+    margin: 0.25em 0; }
+
 .sales .sale {
   clear: both; }
