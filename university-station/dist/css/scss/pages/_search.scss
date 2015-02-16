@@ -1,0 +1,8 @@
+.search {
+	.content > .container {
+		@include padding ($base-spacing * 2);
+	}
+	.searchResults-cnt-row {
+		text-align: center;
+	}
+}

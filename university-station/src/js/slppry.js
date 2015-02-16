@@ -5,6 +5,9 @@ jQuery(document).ready(function(){
 
     // controls
     controls: false,
-    auto: true
+    auto: true,
+
+    //speed
+    speed: 1200
   });
 });

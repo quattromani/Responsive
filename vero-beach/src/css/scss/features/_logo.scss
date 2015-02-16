@@ -2,9 +2,10 @@
   display: inline-block;
   z-index: 9999;
   position: relative;
+  float: left;
 
   @include media($tablet) {
     display: block;
-    text-align: center;
+    float: left;
   }
 }

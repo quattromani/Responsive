@@ -187,7 +187,7 @@
   $nav-hamburger-bg: null;
   $nav-hamburger-color: $color-white;
   $nav-off-canvas-side: down; // left, right, down
-  $nav-hamburger-side: left; // if off-canvas, this should match off-canvas side
+  $nav-hamburger-side: right; // if off-canvas, this should match off-canvas side
   $nav-off-canvas-width: 70%;
   $nav-off-canvas-bg: tint($color-brand-primary, 10%);
   $nav-sticky: false !default;

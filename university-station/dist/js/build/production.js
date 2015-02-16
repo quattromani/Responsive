@@ -414,7 +414,10 @@ $('nav').toggleNav();
 
     // controls
     controls: false,
-    auto: true
+    auto: true,
+
+    //speed
+    speed: 1200
   });
 });
 ;// Create Hex color code from color return

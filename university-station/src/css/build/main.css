@@ -3212,11 +3212,6 @@ ul.tabs {
   display: none;
   padding: 1em; }
 
-.home-carousel img {
-  width: 72.8125em;
-  margin: 0 auto;
-  box-shadow: 0 0 20px 0px #4e4e56; }
-
 /**
  *
  * slippry v1.2.7 - Responsive content slider for jQuery
@@ -3654,6 +3649,11 @@ input[type="button"] {
   list-style: outside disc;
   margin-left: 1em;
   border-bottom: 0; }
+
+.search .content > .container {
+  padding: 2em; }
+.search .searchResults-cnt-row {
+  text-align: center; }
 
 .store #dirmapbutton {
   display: none; }
