@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
+  // =Nav
+  // $nav-alignment: right;
+  // $nav-positioning: -52px; // null
+  // $nav-bg: transparent;
+  // $nav-bg-hover: null;
+  // $nav-font-family: $heading-font-family;
+  // $nav-font-size: $lede-font-size;
+  // $nav-font-weight: 500;
+  // $nav-text-transform: uppercase;
+  // $nav-color: $color-brand-secondary;
+  // $nav-color-hover: $color-brand-quinary;
+  // $nav-dropdown-bg: null;
+  // $nav-dropdown-bg-hover: null;
+  // $nav-dropdown-font-size: $base-font-size;
+  // $nav-dropdown-color: null;
+  // $nav-dropdown-color-hover: null;
+  // $nav-dropdown-border-color: null;
+  // $nav-dropdown-border-color-hover: null;
+  // $nav-hamburger-bg: null;
+  // $nav-hamburger-color: $color-brand-primary;
+  // $nav-hamburger-side: left; // if off-canvas, this should match off-canvas side
+  // $nav-off-canvas-side: left; // left, right, down
+  // $nav-off-canvas-width: 70%;
+  // $nav-off-canvas-bg: tint($color-brand-primary, 10%);
+  // $nav-sticky: false !default;
+
 // Mobile off-canvas wrapers
 .outer-wrapper {
   position: relative;
@@ -27,17 +53,13 @@
 nav {
   position: relative;
   background-color: $nav-bg;
-  margin-top: $nav-positioning;
 
   ul.menu {
+    @include margin(0);
+    @include padding(0 $base-spacing);
     display: inline-block;
     width: 100%;
     text-align: $nav-alignment;
-    @include margin($base-spacing/2 0);
-
-    >li {
-      @include padding(0 $base-spacing);
-    }
 
     li {
       position: relative;
@@ -45,10 +67,19 @@ nav {
       @include font-size($nav-font-size);
       line-height: normal;
       text-align: center;
+      @include padding($base-spacing $base-spacing / 2);
+
+      &:hover {
+        background-color: $color-brand-primary;
+      }
+
+      &.search {
+        @include padding($base-spacing / 2 0 0 0);
+        &:hover { background-color: transparent; }
+      }
 
       a {
         display: block;
-        @include padding($base-spacing / 2 $base-spacing / 4);
         @include font-size($nav-font-size);
         font-family: $nav-font-family;
         font-weight: $nav-font-weight;
@@ -57,8 +88,7 @@ nav {
         text-transform: $nav-text-transform;
 
         &:hover {
-          background-color: $nav-bg-hover;
-          color: mix($nav-color-hover, black, 50%);
+          color: $color-white;
           text-decoration: none;
         }
       }
@@ -72,9 +102,9 @@ nav {
           @include horizontal-center;
           position: absolute;
           display: block;
-          border-bottom: 1px solid transparent;
-          background-color: rgba($color-white, .85);
+          background-color: rgba($color-brand-primary, .65);
           z-index: 999;
+          @include margin ($base-spacing 0 0 0);
 
           li {
             display: block;
@@ -85,17 +115,16 @@ nav {
               border: none;
             }
 
+            &:hover {
+              background-color: rgba($color-brand-quaternary, .65);
+              cursor: pointer;
+            }
+
             a {
               display: block;
               width: 100%;
-              @include padding(($base-spacing * .75) $base-spacing);
               @include font-size($nav-dropdown-font-size);
-              color: $color-brand-primary;
-
-              &:hover {
-                background-color: $color-brand-primary;
-                color: $color-white;
-              }
+              color: $color-white;
             }
           }
         }
@@ -104,29 +133,16 @@ nav {
   }
 }
 
+.search {
+  float: right;
+  input[type=search] {
+    @include margin(0);
+  }
+}
+
 a.open-panel,
 a.close-panel {
   display: none;
-}
-
-.search {
-  float: right;
-  label, button { display: none; }
-  input[type=text] {
-    margin-bottom: 0;
-  }
-}
-
-input[type=search] {
-  @include placeholder {
-    font-family: $fontawesome;
-  }
-  margin-bottom: 0;
-
-  @include media($mobile) {
-    width: calc(100% - 2em);
-    @include margin(($base-spacing /2) $base-spacing);
-  }
 }
 
 @include media($tablet) {
@@ -186,11 +202,10 @@ input[type=search] {
         background-color: $nav-off-canvas-bg;
       }
     }
+
     ul.menu {
       border-top: 1px solid $nav-off-canvas-bg;
       background-color: $nav-off-canvas-bg;
-      @include margin(0);
-
       @if $nav-off-canvas-side == down {
         max-height: 0;
         overflow-y: hidden;
@@ -200,10 +215,6 @@ input[type=search] {
 
       .open-nav & {
         max-height: $nav-off-canvas-height;
-      }
-
-      >li {
-        @include padding(0);
       }
 
       li {
@@ -239,10 +250,6 @@ input[type=search] {
     }
   }
 
-  .search {
-    float: none;
-  }
-
   .open-panel {
     position: absolute;
     @if $nav-hamburger-side == right {
@@ -261,8 +268,8 @@ input[type=search] {
   }
 }
 
-#socialSearch {
-  label, button { display:none; }
+.search {
+  label, button { display: none; }
 }
 
 input[type=search] {

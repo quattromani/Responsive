@@ -24,9 +24,28 @@
 }
 
 //directions
+#mapContainer {
+	@include margin(0 0 $base-spacing 0);
+}
 #map-canvas {
 	@include margin($base-spacing 0);
 }
 input#starting {
 	@include margin($base-spacing 0);
+}
+
+//store inside pages
+#store-logo {
+	float: left;
+	@include margin(0 $base-spacing 0 0);
+}
+
+//search
+.guideStoreMeta {
+	border-bottom: $base-border;
+	@include margin($base-spacing 0);
+	@include padding(0 0 $base-spacing 0);
+	&:last-child {
+		border-bottom: none;
+	}
 }

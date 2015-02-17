@@ -1,5 +1,20 @@
-.sales {
-	.sale {
-		clear: both;
+.deals {
+	border-bottom: $base-border;
+	overflow: auto;
+	@include padding($base-spacing 0);
+	&.single-deal {
+		border-bottom: none;
 	}
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.dealsTitle {
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+dt.dealsStore {
+	float: left;
 }

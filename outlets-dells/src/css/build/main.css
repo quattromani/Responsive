@@ -2649,27 +2649,22 @@ nav {
   position: relative;
   background-color: #bd5b1d; }
   nav ul.menu {
-    margin: 0;
-    padding: 0 1em;
     display: inline-block;
     width: 100%;
-    text-align: left; }
+    text-align: left;
+    margin: 0.5em 0; }
+    nav ul.menu > li {
+      padding: 0 1em; }
     nav ul.menu li {
       position: relative;
       display: inline-block;
       font-size: 14px;
       font-size: 1.4rem;
       line-height: normal;
-      text-align: center;
-      padding: 1em 0.5em; }
-      nav ul.menu li:hover {
-        background-color: #3c2415; }
-      nav ul.menu li.search {
-        padding: 0.5em 0 0; }
-        nav ul.menu li.search:hover {
-          background-color: transparent; }
+      text-align: center; }
       nav ul.menu li a {
         display: block;
+        padding: 0.5em 0.25em;
         font-size: 14px;
         font-size: 1.4rem;
         font-family: "swissboldcond", Arial, Helvetica, sans-serif;
@@ -2678,7 +2673,7 @@ nav {
         color: #fff;
         text-transform: uppercase; }
         nav ul.menu li a:hover {
-          color: #fff;
+          color: #1e120a;
           text-decoration: none; }
       nav ul.menu li ul {
         display: none; }
@@ -2690,33 +2685,51 @@ nav {
                 transform: translate(-50%);
         position: absolute;
         display: block;
-        background-color: rgba(60, 36, 21, 0.65);
-        z-index: 999;
-        margin: 1em 0 0; }
+        border-bottom: 1px solid transparent;
+        background-color: rgba(255, 255, 255, 0.85);
+        z-index: 999; }
         nav ul.menu li:hover ul li {
           display: block;
           min-width: 10.5em;
           border-bottom: 1px solid rgba(60, 36, 21, 0.15); }
           nav ul.menu li:hover ul li.js-last {
             border: none; }
-          nav ul.menu li:hover ul li:hover {
-            background-color: rgba(189, 91, 29, 0.65);
-            cursor: pointer; }
           nav ul.menu li:hover ul li a {
             display: block;
             width: 100%;
+            padding: 0.75em 1em;
             font-size: 12.25px;
             font-size: 1.225rem;
-            color: #fff; }
-
-.search {
-  float: right; }
-  .search input[type=search] {
-    margin: 0; }
+            color: #3c2415; }
+            nav ul.menu li:hover ul li a:hover {
+              background-color: #3c2415;
+              color: #fff; }
 
 a.open-panel,
 a.close-panel {
   display: none; }
+
+.search {
+  float: right; }
+  .search label, .search button {
+    display: none; }
+  .search input[type=text] {
+    margin-bottom: 0; }
+
+input[type=search] {
+  margin-bottom: 0; }
+  input[type=search]::-webkit-input-placeholder {
+    font-family: "FontAwesome"; }
+  input[type=search]::-moz-placeholder {
+    font-family: "FontAwesome"; }
+  input[type=search]:-moz-placeholder {
+    font-family: "FontAwesome"; }
+  input[type=search]:-ms-input-placeholder {
+    font-family: "FontAwesome"; }
+  @media screen and (max-width: 600px) {
+    input[type=search] {
+      width: calc(100% - 2em);
+      margin: 0.5em 1em; } }
 
 @media screen and (max-width: 1000px) {
   .inner-wrapper {
@@ -2740,12 +2753,15 @@ a.close-panel {
     nav ul.menu {
       border-top: 1px solid #4f392c;
       background-color: #4f392c;
+      margin: 0;
       max-height: 0;
       overflow-y: hidden;
       border-top: none;
       transition: all 0.3s ease-in; }
       .open-nav nav ul.menu {
         max-height: 800px; }
+      nav ul.menu > li {
+        padding: 0; }
       nav ul.menu li {
         float: none;
         width: 100%;
@@ -2767,6 +2783,9 @@ a.close-panel {
           font-size: 1.225rem;
           color: #eeede8; }
 
+  .search {
+    float: none; }
+
   .open-panel {
     position: absolute;
     right: 1em;
@@ -2775,7 +2794,7 @@ a.close-panel {
   a.open-panel
    {
     display: inline-block; } }
-.search label, .search button {
+#socialSearch label, #socialSearch button {
   display: none; }
 
 input[type=search]::-webkit-input-placeholder {
@@ -3009,15 +3028,8 @@ footer {
     .mrec .right {
       display: none; } }
 
-.spotlightSidebar-cnt-row {
-  display: inline-block;
-  margin-bottom: 1em; }
-  .spotlightSidebar-cnt-row img {
-    float: left;
-    margin-right: 1em; }
-  .spotlightSidebar-cnt-row p {
-    font-size: 10.5px;
-    font-size: 1.05rem; }
+.sidebar-add {
+  padding: 1em; }
 
 .styleguide article {
   float: left; }
@@ -3508,30 +3520,25 @@ ul.tabs {
 #dirmapbutton {
   margin-top: 1em; }
 
-.directory-form {
-  padding: 1em; }
+.events {
+  border-bottom: 1px solid #ccc;
+  overflow: auto;
+  padding: 1em 0;
+  margin: 0; }
+  .events:last-child {
+    border-bottom: none; }
 
-.hours .left {
-  float: left;
-  display: block;
-  margin-right: 1.40138%;
-  width: 34.08911%; }
-  .hours .left:last-child {
-    margin-right: 0; }
-.hours .right {
-  float: left;
-  display: block;
-  margin-right: 1.40138%;
-  width: 23.94897%; }
-  .hours .right:last-child {
-    margin-right: 0; }
-@media screen and (max-width: 600px) {
-  .hours {
-    display: block;
-    position: relative;
-    top: null;
-    left: null;
-    text-align: center; } }
+.hourspage {
+  border-bottom: none; }
+  .hourspage .hourswidget {
+    margin: 1em 0;
+    width: 200px; }
+  .hourspage table {
+    margin: 0;
+    padding: 0; }
+  @media screen and (max-width: 600px) {
+    .hourspage table {
+      display: none; } }
 
 .home section {
   max-width: 1000px;
@@ -3582,19 +3589,13 @@ ul.tabs {
       width: 100%; }
       .home article:last-child {
         margin-right: 0; }
-      .home article .salesModule {
+      .home article .salesModule, .home article .logos {
         float: left;
         display: block;
         margin-right: 2.84259%;
-        width: 100%; }
-        .home article .salesModule:last-child {
-          margin-right: 0; }
-      .home article .logos {
-        float: left;
-        display: block;
-        margin-right: 2.84259%;
-        width: 100%; }
-        .home article .logos:last-child {
+        width: 100%;
+        text-align: center; }
+        .home article .salesModule:last-child, .home article .logos:last-child {
           margin-right: 0; }
       .home article img {
         margin: 0 auto; } }
@@ -3623,6 +3624,9 @@ ul.tabs {
         margin: 1em auto; }
       .home aside .facebook-box {
         width: 300px; } }
+  @media screen and (max-width: 600px) {
+    .home aside .facebook-box {
+      width: 290px; } }
 
 .facebook-box {
   border: 1px solid #ccc;
@@ -3661,11 +3665,25 @@ ul.tabs {
   .styleguide aside:last-child {
     margin-right: 0; }
 
+#mapContainer {
+  margin: 0 0 1em; }
+
 #map-canvas {
   margin: 1em 0; }
 
 input#starting {
   margin: 1em 0; }
+
+#store-logo {
+  float: left;
+  margin: 0 1em 0 0; }
+
+.guideStoreMeta {
+  border-bottom: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0 0 1em; }
+  .guideStoreMeta:last-child {
+    border-bottom: none; }
 
 .job-logo {
   margin: 1em 0; }
@@ -3683,5 +3701,18 @@ ul.job {
     font-size: 2.2rem;
     margin: 0.25em 0; }
 
-.sales .sale {
-  clear: both; }
+.deals {
+  border-bottom: 1px solid #ccc;
+  overflow: auto;
+  padding: 1em 0; }
+  .deals.single-deal {
+    border-bottom: none; }
+  .deals:last-child {
+    border-bottom: none; }
+
+.dealsTitle {
+  font-size: 2rem;
+  text-transform: uppercase; }
+
+dt.dealsStore {
+  float: left; }

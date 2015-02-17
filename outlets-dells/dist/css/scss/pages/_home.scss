@@ -18,18 +18,11 @@
 			@include span-columns(8);
 			margin-top: $base-spacing;
 		}
-		// @include media($tablet) {
-		// 	@include span-columns(10);
-		// 	@include margin(0);
-		// 	@include padding(0);
-		// }
 		@include media($tablet) {
 			@include span-columns(10);
-			.salesModule {
+			.salesModule, .logos {
 				@include span-columns(10);
-			}
-			.logos {
-				@include span-columns(10);
+				text-align: center;
 			}
 			img {
 				@include margin(0 auto);
@@ -45,15 +38,6 @@
 			float: right;
 			@include margin(0 0 $base-spacing 0);
 		}
-		// @include media($tablet) {
-		// 	@include span-columns(10);
-		// 	@include margin(0);
-		// 	@include padding(0);
-		// 	img {
-		// 		float: left;
-		// 		@include margin($base-spacing);
-		// 	}
-		// }
 		@include media($tablet) {
 			@include span-columns(10);
 			img, .facebook-box {
@@ -61,6 +45,9 @@
 				@include margin($base-spacing auto);
 			}
 			.facebook-box { width: 300px; }
+		}
+		@include media($mobile){
+			.facebook-box { width: 290px; }
 		}
 	}
 }

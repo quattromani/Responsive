@@ -1,1 +1,10 @@
 @charset "UTF-8";
+.events {
+	border-bottom: $base-border;
+	overflow: auto;
+	@include padding($base-spacing 0);
+	@include margin(0);
+	&:last-child {
+		border-bottom: none;
+	}
+}
