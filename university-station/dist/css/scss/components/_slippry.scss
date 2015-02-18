@@ -5,7 +5,16 @@
 //     box-shadow: $base-box-shadow;
 //   }
 // }
-
+.sy-box {
+  visibility: hidden;
+  overflow: hidden;
+}
+@include media($mobile){
+  .sy-box {
+    max-height: 165px;
+    overflow: hidden;
+  }
+}
 /**
  *
  * slippry v1.2.7 - Responsive content slider for jQuery
@@ -122,13 +131,16 @@
 /* element that wraps the slides */
 .sy-slides-wrap {
   position: relative;
+  height: 100%;
   width: 100%; }
   .sy-slides-wrap:hover .sy-controls {
     display: block; }
 
 /* element that crops the visible area to the slides */
 .sy-slides-crop {
+  height: 100%;
   width: 100%;
+  position: absolute;
   overflow: hidden; }
 
 /* list containing the slides */

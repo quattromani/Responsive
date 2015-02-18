@@ -2564,7 +2564,8 @@ body {
   max-width: 72.8125em;
   margin-left: auto;
   margin-right: auto;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .container::after {
     clear: both;
     content: "";
@@ -3212,6 +3213,14 @@ ul.tabs {
   display: none;
   padding: 1em; }
 
+.sy-box {
+  visibility: hidden;
+  overflow: hidden; }
+
+@media screen and (max-width: 600px) {
+  .sy-box {
+    max-height: 165px;
+    overflow: hidden; } }
 /**
  *
  * slippry v1.2.7 - Responsive content slider for jQuery
@@ -3292,6 +3301,7 @@ ul.tabs {
 /* element that wraps the slides */
 .sy-slides-wrap {
   position: relative;
+  height: 100%;
   width: 100%; }
 
 .sy-slides-wrap:hover .sy-controls {
@@ -3299,7 +3309,9 @@ ul.tabs {
 
 /* element that crops the visible area to the slides */
 .sy-slides-crop {
+  height: 100%;
   width: 100%;
+  position: absolute;
   overflow: hidden; }
 
 /* list containing the slides */

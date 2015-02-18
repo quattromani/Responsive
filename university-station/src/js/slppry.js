@@ -10,4 +10,9 @@ jQuery(document).ready(function(){
     //speed
     speed: 1200
   });
+
+});
+
+$( document ).ready(function() {
+	$('.sy-box').css('visibility','visible');
 });

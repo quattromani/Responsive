@@ -371,30 +371,21 @@ $(function() {
   $('li:last-child').addClass('js-last');
 });
 ;// Toggle Navigation
-(function($) {
-
-  $.fn.toggleNav = function() {
-    $('.open-panel').click(function() {
-      if($('html').hasClass('open-nav')) {
-        $('html').removeClass('open-nav');
-      } else {
-        $('html').addClass('open-nav');
-      }
-
-      $(this).toggleClass('active');
-    });
-
-    $('.close-panel').click(function() {
-      if($('html').hasClass('open-nav')) {
-        $('html').removeClass('open-nav');
-      }
-    });
-  }
-
-}(jQuery));
-
-$('nav').toggleNav();
-;/** @preserve
+$(function() {
+  $(".open-panel").click(function(){
+    if($('html').hasClass('open-nav')) {
+      $('html').removeClass('open-nav');
+    } else {
+      $('html').addClass('open-nav');
+    }
+    $(this).toggleClass('active');
+  });
+  $('.close-panel').click(function() {
+    if($('html').hasClass('open-nav')) {
+      $('html').removeClass('open-nav');
+    }
+  });
+});;/** @preserve
  *
  * slippry v1.2.7 - Responsive content slider for jQuery
  * http://slippry.com
@@ -419,8 +410,12 @@ $('nav').toggleNav();
     //speed
     speed: 1200
   });
+
 });
-;// Create Hex color code from color return
+
+$( document ).ready(function() {
+	$('.sy-box').css('visibility','visible');
+});;// Create Hex color code from color return
 function hexc(colorval) {
     var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
     delete(parts[0]);
