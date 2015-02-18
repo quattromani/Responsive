@@ -122,26 +122,21 @@
 /* element that wraps the slides */
 .sy-slides-wrap {
   position: relative;
-  height: 100%;
   width: 100%; }
   .sy-slides-wrap:hover .sy-controls {
     display: block; }
 
 /* element that crops the visible area to the slides */
 .sy-slides-crop {
-  height: 100%;
   width: 100%;
-  position: absolute;
   overflow: hidden; }
 
 /* list containing the slides */
 .sy-list {
   width: 100%;
-  height: 100%;
   list-style: none;
   margin: 0;
-  padding: 0;
-  position: absolute; }
+  padding: 0;}
   .sy-list.horizontal {
     -moz-transition: left ease;
     -o-transition: left ease;
