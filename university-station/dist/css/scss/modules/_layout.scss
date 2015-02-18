@@ -7,7 +7,6 @@ body {
 .container {
   @include outer-container;
   position: relative;
-  overflow: hidden;
 }
 
 .content {
