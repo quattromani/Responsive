@@ -1,3 +1,13 @@
+//temporary
+.logos img {
+	height: 95px;
+}
+.homefix img {
+	height: 207px;
+	width: 300px
+}
+
+
 .home {
 	section {
 		@include outer-container;
@@ -40,9 +50,14 @@
 		}
 		@include media($tablet) {
 			@include span-columns(10);
-			img, .facebook-box {
+			img {
+				float: none;
+				@include margin(0);
+			}
+			.facebook-box, .homeright {
 				float: none;
 				@include margin($base-spacing auto);
+				text-align: center;
 			}
 			.facebook-box { width: 300px; }
 		}

@@ -17,4 +17,5 @@
 
 dt.dealsStore {
 	float: left;
+	@include margin(0 $base-spacing * 2);
 }

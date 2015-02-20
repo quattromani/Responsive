@@ -3540,6 +3540,13 @@ ul.tabs {
     .hourspage table {
       display: none; } }
 
+.logos img {
+  height: 95px; }
+
+.homefix img {
+  height: 207px;
+  width: 300px; }
+
 .home section {
   max-width: 1000px;
   margin-left: auto;
@@ -3619,9 +3626,13 @@ ul.tabs {
       width: 100%; }
       .home aside:last-child {
         margin-right: 0; }
-      .home aside img, .home aside .facebook-box {
+      .home aside img {
         float: none;
-        margin: 1em auto; }
+        margin: 0; }
+      .home aside .facebook-box, .home aside .homeright {
+        float: none;
+        margin: 1em auto;
+        text-align: center; }
       .home aside .facebook-box {
         width: 300px; } }
   @media screen and (max-width: 600px) {
@@ -3715,4 +3726,5 @@ ul.job {
   text-transform: uppercase; }
 
 dt.dealsStore {
-  float: left; }
+  float: left;
+  margin: 0 2em; }
