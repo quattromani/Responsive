@@ -14,5 +14,5 @@ jQuery(document).ready(function(){
 });
 
 $( document ).ready(function() {
-	$('.sy-box').css('visibility','visible');
+	$('.home-carousel').css('visibility','visible');
 });

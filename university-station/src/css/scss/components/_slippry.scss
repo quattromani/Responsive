@@ -5,10 +5,7 @@
 //     box-shadow: $base-box-shadow;
 //   }
 // }
-.sy-box {
-  visibility: hidden;
-  overflow: hidden;
-}
+
 @include media($mobile){
   .sy-box {
     max-height: 165px;
